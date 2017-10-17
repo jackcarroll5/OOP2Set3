@@ -3,7 +3,7 @@ package com.example.oop2set3;
 /**
  * Created by T00194823 on 05/10/2017.
  */
-public class BankAccount extends SavingsAccount implements Transactable,Taxable {
+public abstract class BankAccount implements Transactable,Taxable {
 protected String name;
 protected int accNum;
 
@@ -16,7 +16,7 @@ public BankAccount()
 public BankAccount(String name,int accNum)
 {
   setName(name);
-  setAccNum(0);
+  setAccNum(accNum);
 }
 
     public void setName(String name)
@@ -40,28 +40,25 @@ public BankAccount(String name,int accNum)
         return accNum;
     }
 
-    @Override
-    public void lodge() {
 
-    }
+    /*@Override
+    public abstract double calcTax();*/
 
-    @Override
-    public void withdraw() {
-
-    }
-
-    @Override
-    public double calcTax()
-    {
-        return 0;
-    }
 
     @Override
     public String toString()
     {
-        return "\nName: " + getName() + "\nAccount No: " + getAccNum()
-        + super.toString();
+        return "\nName: " + getName() + "\nAccount No: " + getAccNum();
     }
+
+
+   /* @Override
+    public abstract void lodge(double amount);
+
+
+
+    @Override
+    public abstract void withdraw(double amount);*/
 
 
 }

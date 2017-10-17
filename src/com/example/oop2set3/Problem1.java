@@ -21,21 +21,20 @@ public class Problem1 {
         JOptionPane.showMessageDialog(null,"House 2's details are: " +
                 h2.toString(),"House Details",JOptionPane.INFORMATION_MESSAGE);
 
+
+
        address = JOptionPane.showInputDialog("Please enter the address of your house: ");
-
         type = JOptionPane.showInputDialog("Please enter the type of house you live in: ");
-
         price = JOptionPane.showInputDialog("Please enter the price of your house: ");
         p = Double.parseDouble(price);
 
-        if(p < 0)
+        if(p < 0) {
             p = 0;
-
+        }
         name = JOptionPane.showInputDialog("Please enter the owner's name: ");
 
 
         House h3 = new House(address,type,p,name);
-
 
 
         JOptionPane.showMessageDialog(null,"House 3's details are: " +
@@ -44,4 +43,3 @@ public class Problem1 {
 
        }
     }
-

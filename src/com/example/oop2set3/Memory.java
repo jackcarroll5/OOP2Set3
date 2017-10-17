@@ -3,7 +3,7 @@ package com.example.oop2set3;
 /**
  * Created by T00194823 on 10/10/2017.
  */
-public class Memory {
+public class Memory{
     private String type;
     private int size;
 
@@ -41,7 +41,7 @@ public class Memory {
 
     public String toString()
     {
-     return "\nType: " + getType() + "\nSize: " + getSize();
+     return "\nType: " + getType() + "\nSize: " + getSize() + " GB";
     }
 
 }

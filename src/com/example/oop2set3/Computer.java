@@ -3,24 +3,23 @@ package com.example.oop2set3;
 /**
  * Created by T00194823 on 05/10/2017.
  */
-public class Computer extends Laptop implements IDable {
+public class Computer implements IDable {
 private String ID;
 private String make;
 protected Memory memory;
 
 public Computer()
 {
-   setID("");
-   setMake("");
-   setMemory(null);
+   setID("No ID specified");
+   setMake("No make specified");
+   setMemory(new Memory());
 }
 
-public Computer(String ID, String make, Memory memory)
+public Computer(String ID, String make,String memType,int memSize)
 {
   setID(ID);
   setMake(make);
-  setMemory(memory);
-
+  setMemory(new Memory(memType,memSize));
 }
 
 
@@ -57,7 +56,7 @@ public Computer(String ID, String make, Memory memory)
 
     public String toString()
     {
-      return "\nID: " + getID() + "\nMake: " + getMake() + "\nMemory:" +
-     super.toString();
+      return "\nID: " + getID() + "\nMake: " + getMake() +
+              (getMemory()).toString();
     }
 }

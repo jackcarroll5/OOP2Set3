@@ -3,16 +3,21 @@ package com.example.oop2set3;
 /**
  * Created by T00194823 on 05/10/2017.
  */
-public class SavingsAccount {
+public class SavingsAccount extends BankAccount {
     private double balance;
 
     public SavingsAccount()
     {
-      setBalance(0);
+        //setName("");
+       // setAccNum(0);
+        super("",0);
+       setBalance(0);
     }
 
-    public SavingsAccount(double balance)
+
+    public SavingsAccount(String name, int accNum,double balance)
     {
+        super(name,accNum);
        setBalance(balance);
     }
 
@@ -28,7 +33,26 @@ public class SavingsAccount {
     }
 
     @Override
-    public String toString() {
-        return "\nBalance: " + getBalance();
+    public String toString()
+    {
+        return super.toString() + "\nBalance: €" + getBalance();
+    }
+
+
+    @Override
+    public double calcTax()
+    {
+        return getBalance() * 0.5f;
+    }
+
+    @Override
+    public void lodge(double amount) {
+     setBalance(getBalance() + amount);
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        if (getBalance() > amount)
+        setBalance(getBalance() - amount);
     }
 }

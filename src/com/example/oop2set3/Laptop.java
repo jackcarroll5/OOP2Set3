@@ -3,20 +3,20 @@ package com.example.oop2set3;
 /**
  * Created by T00194823 on 05/10/2017.
  */
-public class Laptop  {
+public class Laptop extends Computer {
 private boolean touchScreen;
-
 
 public Laptop()
 {
+    super("No ID specified","No make specified","No type specified",0);
    isTouchScreen();
 
 }
 
-public Laptop(boolean touchScreen)
+public Laptop(String ID,String make,String memType,int memSize,boolean touchScreen)
 {
+   super(ID,make,memType,memSize);
    isTouchScreen();
-
 }
 
 public void setTouchScreen(boolean touchScreen)
@@ -31,7 +31,7 @@ public void setTouchScreen(boolean touchScreen)
 
     public String toString()
 {
-    return "\nTouch Screen: " + isTouchScreen();
+    return super.toString() + "\nTouch Screen: " + isTouchScreen();
 }
 
 
