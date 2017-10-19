@@ -7,7 +7,6 @@ public class Problem1 {
        String address,type,price,name;
        double p;
 
-
      House h1 = new House();
 
      JOptionPane.showMessageDialog(null,"House 1's details are: " +
@@ -27,7 +26,6 @@ public class Problem1 {
         type = JOptionPane.showInputDialog("Please enter the type of house you live in: ");
         price = JOptionPane.showInputDialog("Please enter the price of your house: ");
         p = Double.parseDouble(price);
-
         if(p < 0) {
             p = 0;
         }
@@ -39,7 +37,6 @@ public class Problem1 {
 
         JOptionPane.showMessageDialog(null,"House 3's details are: " +
                 h3.toString(),"House Details",JOptionPane.INFORMATION_MESSAGE);
-
 
        }
     }

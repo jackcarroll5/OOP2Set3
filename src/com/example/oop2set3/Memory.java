@@ -9,7 +9,7 @@ public class Memory{
 
     public Memory()
     {
-      setType("");
+      setType("No type specified");
       setSize(0);
     }
 

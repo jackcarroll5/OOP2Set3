@@ -29,7 +29,6 @@ public BankAccount(String name,int accNum)
         this.accNum = accNum;
     }
 
-
     public String getName()
     {
         return name;
@@ -39,7 +38,6 @@ public BankAccount(String name,int accNum)
     {
         return accNum;
     }
-
 
     /*@Override
     public abstract double calcTax();*/
@@ -55,10 +53,7 @@ public BankAccount(String name,int accNum)
    /* @Override
     public abstract void lodge(double amount);
 
-
-
     @Override
     public abstract void withdraw(double amount);*/
-
 
 }

@@ -22,7 +22,6 @@ public Computer(String ID, String make,String memType,int memSize)
   setMemory(new Memory(memType,memSize));
 }
 
-
     @Override
     public void setID(String ID)
     {

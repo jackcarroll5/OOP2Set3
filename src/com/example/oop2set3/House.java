@@ -70,5 +70,4 @@ public void setAddress(String address)
      return "\nAddress: " + getAddress() + "\nType: " + getType() +
              "\nPrice: €" + getPrice() + super.toString();
     }
-
 }

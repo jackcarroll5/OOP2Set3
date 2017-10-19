@@ -10,17 +10,15 @@ public class SavingsAccount extends BankAccount {
     {
         //setName("");
        // setAccNum(0);
-        super("",0);
+        super("No name",0);
        setBalance(0);
     }
-
 
     public SavingsAccount(String name, int accNum,double balance)
     {
         super(name,accNum);
        setBalance(balance);
     }
-
 
     public void setBalance(double balance)
     {
@@ -37,7 +35,6 @@ public class SavingsAccount extends BankAccount {
     {
         return super.toString() + "\nBalance: €" + getBalance();
     }
-
 
     @Override
     public double calcTax()

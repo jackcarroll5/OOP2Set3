@@ -15,17 +15,17 @@ public class Problem2 {
         Scanner input = new Scanner(System.in);
 
      SavingsAccount acc1 = new SavingsAccount();
-
-     System.out.println(acc1.toString());
+     System.out.println("No argument Account 1:" + acc1.toString());
 
      SavingsAccount acc2 = new SavingsAccount("Thomas Kavanagh",4691,500.80);
-
-     System.out.println(acc2.toString());
+     System.out.println("\nThe 3-argument Account 2:" + acc2.toString());
 
      acc2.lodge(500);
-
         System.out.println("\n\nThe details of the inputted Account 2 after lodging:\n " +
                 acc2);
+
+
+
 
       System.out.print("\n\nPlease enter a name to add to your bank account: ");
       name = input.nextLine();
@@ -36,23 +36,18 @@ public class Problem2 {
 
 
       SavingsAccount acc3 = new SavingsAccount(name,accNum,balance);
-
-
       System.out.println("\n\nThe details of the inputted Account 3:\n " +
       acc3.toString());
 
 
-         acc3.withdraw(4554);
-
+         acc3.withdraw(4500);
         System.out.println("\n\nThe details of the inputted Account 3 after withdrawal:\n " +
                acc3);
 
 
         acc3.calcTax();
-
         System.out.println("\n\nThe details of the inputted Account 3 after the tax is calculated:\n " +
                 acc3);
-
 
     }
 }
